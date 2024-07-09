@@ -5,16 +5,17 @@ function FrameGroup() {
   return (
     <div className='flex'>
         <div className='flex-col'>
-            <Eframe>mh.png</Eframe>
-            <Eframe>Helmet</Eframe>
-            <Eframe>Armor</Eframe>
-            <Eframe>Legs</Eframe>
+            <Eframe imageName='mh.png'/>
+            <Eframe imageName='helm.png'/>
+            <Eframe imageName='armor.png'/>
+            <Eframe imageName='legs.png'/>
+            
         </div>
         <div className='flex-col'>
-            <Eframe>Offhand</Eframe>
-            <Eframe>Accessories 1</Eframe>
-            <Eframe>Accessories 2</Eframe>
-            <Eframe>Accessories 3</Eframe>
+            <Eframe imageName='oh.png'/>
+            <Eframe imageName='acc.png'/>
+            <Eframe imageName='acc.png'/>
+            <Eframe imageName='acc.png'/>
         </div>
         
     </div>

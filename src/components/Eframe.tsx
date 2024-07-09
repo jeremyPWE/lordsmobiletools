@@ -2,12 +2,15 @@ import React from 'react'
 import Image from 'next/image';
 
 interface EframeProps {
-  children: React.ReactNode;
+  imageName: string;
 }
 
-function Eframe({children}) {
+const Eframe: React.FC<EframeProps> = ({ imageName }) => {
   return (
-    <div className='border-white border-2 w-24 h-24'><Image src={children} className='flex w-full h-full object-contain' alt={children} fill></Image></div>
+    <div className='w-32 h-32 relative m-4'>
+      <Image src={`/images/placeholder/${imageName}`} className='object-contain' alt={imageName} fill></Image>
+      
+    </div>
   )
 }
 
