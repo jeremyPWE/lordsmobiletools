@@ -1,7 +1,22 @@
-import React from 'react'
+'use client'
+import React, { useState } from 'react'
 import Eframe from './Eframe'
+import mockData from '@/mockData'
 
 function FrameGroup() { 
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const [selectedType, setSelectedType] = useState(null);
+
+  const handleEframeClick = (type) => {
+    setSelectedType(type);
+    setIsPopupOpen(true);
+  }
+
+  const handleClosePopup = () => {
+    setIsPopupOpen(false);
+    setSelectedType(null);
+  }
+
   return (
     <div className='flex'>
         <div className='flex-col'>
