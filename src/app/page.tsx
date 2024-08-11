@@ -7,6 +7,7 @@ import EquipmentPopup from "@/components/EquipmentPopup";
 export default function Home() {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [selectedType, setSelectedType] = useState(null);
+  const [selectEq, setSelectEq] = useState(null);
 
   const handleEframeClick = (type) => {
     setSelectedType(type);
@@ -18,12 +19,16 @@ export default function Home() {
     setSelectedType(null);
   }
 
+  const handleSelectEq = (name) => {
+    setSelectEq(name);
+  }
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div className="w-full max-w-5xl flex justify-around border-2 border-white">
         <FrameGroup onEframeClick={handleEframeClick}/>
         {isPopupOpen && (
-          <EquipmentPopup type={selectedType} onClose={handleClosePopup} />
+          <EquipmentPopup type={selectedType} onClose={handleClosePopup} name={selectEq}/> /* update here for state to pass on */
         )}
         <div className="p-4">
           <h2 className="text-3xl">Total Boost</h2>
