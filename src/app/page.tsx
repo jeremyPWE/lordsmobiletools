@@ -7,7 +7,8 @@ import EquipmentPopup from "@/components/EquipmentPopup";
 export default function Home() {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [selectedType, setSelectedType] = useState(null);
-  const [selectEq, setSelectEq] = useState(null);
+  const [selectEq, setSelectEq] = useState<Equipment[]>([])
+
 
   const handleEframeClick = (type) => {
     setSelectedType(type);
