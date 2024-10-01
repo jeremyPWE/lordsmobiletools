@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Eframe from './Eframe'
 
 interface FrameGroupProps {
@@ -6,7 +6,10 @@ interface FrameGroupProps {
 }
 
 const FrameGroup: React.FC<FrameGroupProps> = ({onEframeClick}) => { 
-
+  {/* add state here to store the equipment value */}
+  //state to store equipment selected
+  const [selectedEquipent, addSelectedEquipment] = useState<Equipment[]>([]); 
+  //
   return (
     <div className='flex'>
         <div className='flex-col'>
